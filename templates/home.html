@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PocketSmart AI - Home Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <a href="/party">Open Party Budget Planner</a>
+    <a href="/jewelry">Open Jewelry Budget Planner</a>
+
+    <h1>PocketSmart AI</h1>
+    <h1>PocketSmart AI</h1>
+    <h2>Home Budget Planner</h2>
+
+    <form action="/generate-home" method="post">
+        <label for="budget">Total budget (₹)</label>
+        <input id="budget" name="budget" type="number" min="1" required>
+
+        <br><br>
+
+        <label for="room">Room</label>
+        <select id="room" name="room" required>
+            <option value="Bedroom">Bedroom</option>
+            <option value="Living Room">Living Room</option>
+            <option value="Kitchen">Kitchen</option>
+        </select>
+
+        <br><br>
+
+        <label for="style">Preferred style</label>
+        <input id="style" name="style" type="text"
+               placeholder="For example, modern" required>
+
+        <br><br>
+
+        <button type="submit">Plan my budget</button>
+    </form>
+</body>
+</html>

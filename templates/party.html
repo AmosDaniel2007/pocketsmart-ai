@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Party Planner | PocketSmart AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <h1>PocketSmart AI</h1>
+    <h2>Party Budget Planner</h2>
+
+    <form action="/generate-party" method="post">
+        <label for="budget">Total budget (₹)</label>
+        <input id="budget" name="budget" type="number" min="1" required>
+
+        <label for="guests">Number of guests</label>
+        <input id="guests" name="guests" type="number" min="1" required>
+
+        <label for="occasion">Occasion</label>
+        <select id="occasion" name="occasion">
+            <option>Birthday</option>
+            <option>Graduation</option>
+            <option>Family gathering</option>
+            <option>Other</option>
+        </select>
+
+        <button type="submit">Plan my party</button>
+    </form>
+
+    <a href="/">Back to Home planner</a>
+</body>
+</html>

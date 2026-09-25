@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Home Budget Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <h1>Your {{ room }} Budget Plan</h1>
+    <p>Style: {{ style }}</p>
+    <p>Total budget: ₹{{ total_budget }}</p>
+
+    <h2>Budget breakdown</h2>
+    <ul>
+        <li>Furniture: ₹{{ furniture }}</li>
+        <li>Lighting: ₹{{ lighting }}</li>
+        <li>Decor: ₹{{ decor }}</li>
+        <li>Reserve: ₹{{ reserve }}</li>
+    </ul>
+
+    <section>
+        <h2>AI decorating ideas</h2>
+        <p style="white-space: pre-wrap;">{{ ai_suggestion }}</p>
+    </section>
+
+    <a href="/">Create another plan</a>
+</body>
+</html>

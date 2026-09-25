@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Party Plan | PocketSmart AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <h1>Your {{ occasion }} Plan</h1>
+    <p>Guests: {{ guests }}</p>
+    <p>Total budget: ₹{{ total_budget }}</p>
+
+    <h2>Budget breakdown</h2>
+    <ul>
+        <li>Food: ₹{{ food }}</li>
+        <li>Venue: ₹{{ venue }}</li>
+        <li>Decorations: ₹{{ decorations }}</li>
+        <li>Entertainment: ₹{{ entertainment }}</li>
+        <li>Reserve: ₹{{ reserve }}</li>
+    </ul>
+    <section>
+    <h2>AI party ideas</h2>
+    <p style="white-space: pre-wrap;">{{ ai_suggestion }}</p>
+</section>
+
+    <a href="/party">Create another party plan</a>
+</body>
+</html>

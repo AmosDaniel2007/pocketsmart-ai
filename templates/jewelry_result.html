@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Jewelry Plan | PocketSmart AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <h1>Your {{ item }} Plan</h1>
+    <p>Occasion: {{ occasion }}</p>
+    <p>Total budget: ₹{{ total_budget }}</p>
+
+    <h2>Suggested budget allocation</h2>
+    <ul>
+        <li>Jewelry item: ₹{{ item_budget }}</li>
+        <li>Making charges allowance: ₹{{ making_charges_allowance }}</li>
+        <li>Reserve: ₹{{ reserve }}</li>
+    </ul>
+
+    <p>These are planning amounts, not a shop price estimate.</p>
+    <section>
+    <h2>AI jewelry tips</h2>
+    <p style="white-space: pre-wrap;">{{ ai_suggestion }}</p>
+</section>
+    <a href="/jewelry">Create another jewelry plan</a>
+</body>
+</html>

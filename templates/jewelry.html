@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jewelry Planner | PocketSmart AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <h1>PocketSmart AI</h1>
+    <h2>Jewelry Budget Planner</h2>
+
+    <form action="/generate-jewelry" method="post">
+        <label for="budget">Total budget (₹)</label>
+        <input id="budget" name="budget" type="number" min="1" required>
+
+        <label for="item">Jewelry item</label>
+        <select id="item" name="item">
+            <option>Ring</option>
+            <option>Necklace</option>
+            <option>Earrings</option>
+            <option>Bracelet</option>
+        </select>
+
+        <label for="occasion">Occasion</label>
+        <input id="occasion" name="occasion" type="text"
+               placeholder="For example, wedding" required>
+
+        <button type="submit">Plan my jewelry budget</button>
+    </form>
+
+    <a href="/">Back to Home planner</a>
+</body>
+</html>
